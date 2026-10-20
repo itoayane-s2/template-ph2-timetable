@@ -4,7 +4,10 @@
 -- 曜日（day）は数字のまま返してよい
 
 -- 区画7：すべての授業と教室の情報（科目コードの順）
-
+SELECT c.code, c.name, c.room, r.building, r.capacity FROM courses c
+LEFT JOIN rooms r
+ON c.room = r.code
+ORDER BY c.code;
 
 -- 区画8：曜日ごとの授業数（曜日の順）
 
